@@ -1,0 +1,179 @@
+.visiting {
+    margin-top: 77px;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .visiting {
+        margin-top: 40px;
+    }
+}
+
+.visiting__title {
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    color: $font-gold;
+    text-transform: uppercase;
+    font-family: $forum;
+    font-weight: 400;
+
+    &:after {
+        content: "";
+        border: 1px solid $dark-red;
+        display: flex;
+        margin: 25px 0 75px 0;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .visiting__title {
+        font-size: 50px;
+        line-height: 75px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .visiting__title {
+        font-size: 40px;
+        line-height: 60px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .visiting__title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+.visiting__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+@media screen and(max-width:$breakpoint_xl) {
+    .visiting__cards {
+        padding: 0 108px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .visiting__cards {
+        padding: 0 56px;
+    }
+}
+
+
+.card__title {
+    font-size: 32px;
+    letter-spacing: 5px;
+    line-height: 35px;
+    font-family: 'Forum', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 21px;
+
+    &:after {
+        content: "";
+        border: 1px solid $dark-red;
+        display: flex;
+        width: 301px;
+        margin: 9px 0 10px 0;
+        transition: 0.4s linear;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .card__title {
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 3px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .card__title {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 3px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .card__title {
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 5px;
+    }
+}
+
+.card:hover .card__title:after {
+    width: 440px;
+    transition: 0.4s linear;
+}
+
+.card__subtitle {
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 200;
+    padding-bottom: 11px;
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .card__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .card__subtitle {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .card__subtitle {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 21px;
+    padding-bottom: 76px;
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .text {
+        padding-bottom: 40px;
+    }
+}
+
+
+@media screen and(max-width:$breakpoint_sm) {
+    .text {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+
+@media screen and(max-width:$breakpoint_xl) {
+    .visiting__img {
+        width: 330px;
+        height: 215px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .visiting__img {
+        width: 280px;
+        height: 180px;
+    }
+}

@@ -1,0 +1,156 @@
+.contacts {
+    padding-top: 75px;
+    padding-bottom: 71px;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .contacts {
+        padding-top: 40px;
+
+    }
+}
+
+.contacts__title {
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    color: $font-gold;
+    text-transform: uppercase;
+    font-family: $forum;
+    font-weight: 400;
+
+    &:after {
+        content: "";
+        border: 1px solid $dark-red;
+        display: flex;
+        margin: 26px 0 75px 0;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .contacts__title {
+        font-size: 50px;
+        line-height: 75px;
+
+        &:after {
+            margin: 20px 0 60px 0;
+        }
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .contacts__title {
+        font-size: 40px;
+        line-height: 60px;
+
+        &:after {
+            margin: 20px 0 40px 0;
+        }
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .contacts__title {
+        font-size: 28px;
+        line-height: 40px;
+
+    }
+}
+
+.contacts__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .contacts__inner {
+        flex-direction: column;
+
+    }
+}
+
+.contacts__text {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .contacts__text {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+.contacts__headline {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    padding: 0 0 50px 0;
+    width: 215px;
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .contacts__headline {
+        width: 100%;
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .contacts__headline {
+        width: 155px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.contacts__address {
+    padding-bottom: 25px;
+
+    &--spn {
+        padding-right: 6px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .contacts__address {
+        padding-bottom: 15px;
+    }
+}
+
+
+.contacts__phone {
+    padding-bottom: 25px;
+
+    &--spn {
+        padding-right: 6px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .contacts__phone {
+        padding-bottom: 15px;
+    }
+}
+
+.contacts__mail--spn {
+    padding-right: 6px;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .contacts__mail {
+        padding-bottom: 40px;
+    }
+}
+
+#googleMap {
+    width: 960px;
+    height: 620px;
+}
+
+.mapboxgl-ctrl button.mapboxgl-ctrl-fullscreen {
+    display: none;
+}

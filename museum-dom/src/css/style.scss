@@ -1,0 +1,95 @@
+@import "vars";
+
+/* Default styles */
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $roboto;
+    background-color: $white;
+    color: $white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 320px;
+    height: 100%;
+}
+
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+.slider {
+    position: absolute;
+}
+
+/*Sections*/
+
+.section--dark {
+    background-color: $bg-dark;
+    color: $white;
+}
+
+.section--light {
+    background-color: $white;
+    color: $black;
+}
+
+.container {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Blocks */
+@import "header";
+@import "welcome";
+@import "visiting";
+@import "panorama";
+@import "explore";
+@import "video";
+@import "gallery";
+@import "tickets";
+@import "parallax";
+@import "contacts";
+@import "footer";
+@import "modal";
+

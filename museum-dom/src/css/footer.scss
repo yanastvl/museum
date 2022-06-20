@@ -1,0 +1,229 @@
+.footer {
+    padding: 87px 0 50px;
+}
+
+
+@media  screen and(max-width:$breakpoint_xl) {
+    .footer {
+        padding: 60px 0 50px;
+    }
+}
+
+
+@media  screen and(max-width:$breakpoint_sm) {
+    .footer {
+        padding: 40px 0 40px;
+    }
+}
+
+.footer__information {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.footer__menu {
+    padding-top: 12px;
+    font-family: $roboto;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    padding-right: 121px;
+    flex: 0.63;
+}
+
+@media  screen and(max-width:$breakpoint_m) {
+    .footer__menu {
+        padding: 0 34px 0 19px;
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 56px;
+    }
+}
+
+@media  screen and(max-width:$breakpoint_sm) {
+    .footer__menu {
+        width: 380px;
+        padding: 40px 0 40px;
+    }
+}
+
+
+.footer__list {
+    color: $white;
+    column-count: 2;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .footer__list {
+        flex-direction: column;
+        columns: 2;
+        grid-column-gap: 185px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .footer__list {
+        flex-direction: column;
+        columns: 3;
+        grid-column-gap: 83px;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 14px;
+}
+
+@media  screen and(max-width:$breakpoint_m) {
+    .footer__social {
+        padding: 0 90px 40px 298px;
+    }
+}
+
+@media  screen and(max-width:$breakpoint_sm) {
+    .footer__social {
+        padding: 0 60px 40px;
+    }
+}
+
+.social__item {
+    border: 1px solid #666666;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__item:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media  screen and(max-width:$breakpoint_sm) {
+    .social__item:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.social__link {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.social__link--yt {
+    background-image: url(../assets/img/svg/social/youtube.svg);
+    width: 23px;
+    height: 16px;
+}
+
+.social__link--inst {
+    background-image: url(../assets/img/svg/social/instagram.svg);
+    width: 20px;
+    height: 20px;
+}
+
+.social__link--fb {
+    background-image: url(../assets/img/svg/social/facebook.svg);
+    width: 12.5px;
+    height: 20px;
+}
+
+.social__link--tw {
+    background-image: url(../assets/img/svg/social/twitter.svg);
+    width: 20px;
+    height: 16px;
+}
+
+.social__link--pint {
+    background-image: url(../assets/img/svg/social/pinterest.svg);
+    width: 20px;
+    height: 20px;
+}
+
+.social__link:hover path,
+.social__item:hover {
+    filter: invert(62%) sepia(9%) saturate(1279%) hue-rotate(356deg) brightness(85%) contrast(89%);
+}
+
+.footer__links {
+    padding: 50px 0;
+}
+
+.links__information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.school__name {
+    transition: 0.4s;
+    font-family: $roboto;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+
+    &:hover {
+        color: $font-gold;
+    }
+
+    &:active {
+        color: $active-gold;
+    }
+}
+
+@media  screen and(max-width:$breakpoint_sm) {
+    .school__name {
+        display: none;
+    }
+}
+
+.author__name {
+    transition: 0.4s;
+    font-family: $roboto;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    transition: 0.4s;
+
+    &:hover {
+        color: $font-gold;
+    }
+
+    &:active {
+        color: $active-gold;
+    }
+}
+
+.copyright__name {
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: $roboto;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+
+    &:hover {
+        color: $font-gold;
+    }
+
+    &:active {
+        color: $active-gold;
+    }
+}
+
+.hr__footer {
+    border: 1px solid #666666;
+}
+
+.menu__link--footer {
+    padding-bottom: 25px;
+}

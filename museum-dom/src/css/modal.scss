@@ -1,0 +1,712 @@
+.booking__wrapper {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.7);
+    position: fixed;
+    top: 0;
+    left: -5000px;
+    z-index: 10;
+    transition: left .5s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+}
+
+.form__active {
+    left: 0;
+}
+
+.booking {
+    width: 1440px;
+    margin: 0 auto;
+    height: 845px;
+    padding-top: 91px;
+    position: relative;
+    background-color: #fff;
+    cursor: default;
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .booking {
+        width: 1024px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .booking {
+        width: 590px;
+        height: 1479px;
+        padding: 79px 0 40px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .booking {
+        width: 420px;
+        height: 1754px;
+        position: static;
+        padding-top: 80px;
+    }
+}
+
+.booking__close {
+    width: 25px;
+    height: 25px;
+    background-color: $white;
+    position: absolute;
+    top: 29px;
+    right: 31px;
+    cursor: pointer;
+}
+
+/*right column*/
+
+.right__column {
+    padding-right: 40px;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .right__column {
+        padding-right: 0;
+    }
+}
+
+.modal__inner {
+    font-family: $roboto;
+    padding-left: 235px;
+    display: flex;
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .modal__inner {
+        padding: 0 27px 0 27px;
+    }
+}
+
+@media(max-width:$breakpoint_m) {
+    .modal__inner {
+        flex-direction: column;
+        padding: 0 30px 0 30px;
+    }
+}
+
+.modal__title {
+    padding-bottom: 15px;
+
+    color: $font-gold;
+    font-family: 'Forum', cursive;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 56px;
+    text-transform: uppercase;
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .modal__title {
+        font-size: 32px;
+        line-height: 35px;
+        font-weight: 400;
+    }
+}
+
+
+.modal__subtitle {
+    color: $dark-red;
+    font-weight: 400;
+    font-size: 18px;
+
+    line-height: 22px;
+
+    &:after {
+        content: "";
+        border: 1px solid $dark-red;
+        display: flex;
+        margin: 10px 0 60px 0;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .modal__subtitle {
+        &:after {
+            content: "";
+            border: 1px solid $dark-red;
+            display: flex;
+            margin: 10px 0 39px 0;
+        }
+    }
+}
+
+
+/*input*/
+
+.datetime {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .datetime {
+        flex-direction: column;
+    }
+
+}
+
+.input__modal--date,
+.input__modal--time {
+    width: 190px;
+    height: 45px;
+    background-color: white;
+    display: block;
+    padding: 13px 15px 12px 43px;
+    position: relative;
+    border: 1px solid $black;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    background-image: url(../assets/img/svg/modal/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) 50%;
+
+}
+
+@media screen and(max-width:$breakpoint_m) {
+
+    .input__modal--date,
+    .input__modal--time {
+        width: 251px;
+
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+
+    .input__modal--date,
+    .input__modal--time {
+        width: 360px;
+
+    }
+}
+
+.input__modal {
+    display: block;
+    width: 400px;
+    height: 45px;
+    margin-top: 20px;
+    padding: 13px 15px 12px 43px;
+    position: relative;
+    border: 1px solid $black;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+}
+
+:-ms-input-placeholder {
+    color: black;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: black;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .input__modal {
+        width: 530px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .input__modal {
+        width: 360px;
+    }
+}
+
+.input__container {
+    position: relative;
+}
+
+.placeholder-icon {
+    position: absolute;
+    z-index: 5;
+    top: 15px;
+    left: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    background-image: url(../assets/img/svg/modal/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) 50%;
+}
+
+//input[type="date"]::-webkit-inner-spin-button,
+//input[type="date"]::-webkit-calendar-picker-indicator {
+//    display: none;
+//    -webkit-appearance: none;
+//}
+
+input[type="time"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*Entry windows*/
+
+.entry__window {
+    border: 1px solid $black;
+    padding: 10px 15px 15px;
+    height: 135px;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .entry__window {
+        margin-bottom: 50px;
+    }
+}
+
+.entry__title {
+    color: $font-gold;
+    font-family: $forum;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+
+    &:after {
+        content: "";
+        border: 1px solid $dark-red;
+        display: flex;
+        margin: 5px 0 18px 0;
+    }
+}
+
+.entry__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.entry__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.entry__input {
+    width: 105px;
+    height: 25px;
+    position: relative;
+}
+
+.entry__button--plus,
+.entry__button--minus {
+    width: 36px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    border: none;
+    background-color: #030303;
+    color: $white;
+    font-size: 18px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.entry__button--plus {
+    right: -2px;
+}
+
+.entry__button--num {
+    all: unset;
+    display: block;
+    height: 25px;
+    margin-left: 0;
+    width: 105px;
+    margin-bottom: 0;
+    text-align: center;
+    border: 1px solid #030303;
+}
+
+/*left column*/
+
+.left__column {
+    padding: 25px 30px;
+    width: 530px;
+    height: 670px;
+    border: 1px solid #030303;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .left__column {
+        padding: 25px 15px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .left__column {
+        width: 360px;
+        height: 885px;
+    }
+}
+
+/*Date*/
+
+.date__section {
+    padding-bottom: 22px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 150px;
+        height: 120px;
+        background-image: url(../assets/img/modal.jpg);
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .date__section {
+        &:before {
+            width: 120px;
+            height: 96px;
+            background-size: 100%;
+        }
+    }
+}
+
+
+.date--title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.date--subtitle {
+    color: $dark-red;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+
+.date__block {
+    display: flex;
+}
+
+.date__block--img {
+    object-fit: contain;
+}
+
+.date__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 15px;
+}
+
+/*Price*/
+
+.price__section {
+    border-bottom: 1px solid #710707;
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+}
+
+.price__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price__button {
+    display: inline-block;
+    width: 32px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #030303;
+    font-size: 18px;
+    color: #a4a4a3;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.price__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price__text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.price__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+    &--text {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+/*Card*/
+
+.card__block {
+    margin-bottom: 26px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #161615;
+    position: relative;
+    margin-bottom: 56px;
+}
+
+.front__card {
+    padding: 15px 20px;
+    background-color: #BCBCBC;
+    border-radius: 3px;
+    width: 360px;
+    height: 211px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        background-image: url(../assets/img/Visa.png);
+        top: 34px;
+        height: 16px;
+        content: "";
+        position: absolute;
+        width: 55px;
+        right: 20px;
+        background-repeat: no-repeat;
+    }
+
+    &:after {
+        background-image: url(../assets/img/Mastercard.png);
+        top: 65px;
+        height: 32px;
+        content: "";
+        position: absolute;
+        width: 55px;
+        right: 20px;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .front__card {
+        width: 330px;
+        height: 209px;
+    }
+}
+
+
+.input__card {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    height: 35px;
+    border: 1px solid #BCBCBC;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    &--num {
+        max-width: 215px;
+    }
+
+}
+
+.card__date {
+    max-width: 215px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input__card--date {
+    max-width: 100px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: #BCBCBC;
+        right: 28px;
+    }
+}
+
+.card__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.back__card {
+    padding: 25px 20px 15px;
+    background-color: #939393;
+    border-radius: 3px;
+    max-width: 360px;
+    width: 100%;
+    height: 211px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 45px;
+        background-color: #161615;
+        top: 25px;
+        left: 0;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .back__card {
+        position: relative;
+        width: 330px;
+        height: 209px;
+    }
+}
+
+
+.back__card--text {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.input__card--cvv {
+    padding: 5px;
+    display: block;
+    width: 75px;
+    height: 35px;
+    border: 1px solid #BCBCBC;
+    margin-bottom: 6px;
+    margin-top: 5px;
+}
+
+.card__info {
+    width: 65px;
+    height: 50px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+/*Button*/
+
+.modal__button {
+    width: 220px;
+    height: 45px;
+    background-color: $dark-red;
+    font-family: $roboto;
+    font-size: 22px;
+    font-weight: 400;
+    color: $white;
+    overflow: hidden;
+    position: absolute;
+    top: 250px;
+    right: 0;
+
+}
+
+.button__text {
+    font-family: $roboto;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background: #710707 radial-gradient(circle, transparent 1%, #710707 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: #ff321b;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: none;
+}
+
+input[type="time"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.invalid__input {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+.error {
+
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+

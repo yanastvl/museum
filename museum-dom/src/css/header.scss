@@ -1,0 +1,332 @@
+.header {
+    padding: 59px 0;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .header {
+        padding: 0;
+    }
+}
+
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .header__row {
+        height: 110px;
+    }
+}
+
+.logo {
+    transition: 0.4s;
+}
+
+.logo__svg {
+    &:hover {
+        path {
+            fill: $font-gold;
+        }
+    }
+
+    &:active {
+        path {
+            fill: $active-gold;
+        }
+    }
+}
+
+.menu__items {
+    font-family: $roboto;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    display: flex;
+}
+
+.menu--hvr {
+    transition: 0.4s;
+
+    &:hover {
+        color: $font-gold;
+    }
+
+    &:active {
+        color: $active-gold;
+    }
+}
+
+.menu__link {
+    position: relative;
+    transition: 0.4s;
+
+    &:not(:last-of-type) {
+        padding-right: 55px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .menu__link {
+        padding-bottom: 25px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 9px;
+            right: 0;
+            width: 8px;
+            height: 12px;
+            background-image: url(../assets/img/svg/arrow.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .menu__link:not(:last-child) {
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .menu__link:not(:last-child) {
+        &:after {
+            top: 7px;
+            right: 80%;
+        }
+    }
+}
+
+
+@media screen and(max-width:$breakpoint_sm) {
+    .menu__link:not(:last-child) {
+        &:after {
+            right: 50%;
+        }
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: auto;
+        right: 2%;
+        width: 32px;
+        height: auto;
+        cursor: pointer;
+        z-index: 1;
+
+        > span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transition-duration: .25s;
+
+            &::before {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                transition-duration: .25s;
+                content: '';
+                top: -8px;
+            }
+
+            &::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: white;
+                transition-duration: .25s;
+                content: '';
+                top: 8px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:$breakpoint_xl) {
+    .menu__items {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        top: 130px;
+        left: -100%;
+        width: 297px;
+        height: 585px;
+        margin: 0;
+        list-style: none;
+        background-color: $bg-dark;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+        transition-duration: .25s;
+        z-index: 9;
+
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 24px;
+        padding: 35px 120px 0 55px;
+
+    }
+
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .menu__items {
+        width: 768px;
+        height: 861px;
+        padding: 35px 55px 0 55px;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .menu__items {
+        width: 420px;
+        height: 544px;
+        padding: 35px 55px 0 55px;
+    }
+}
+
+#menu-toggle {
+    opacity: 0;
+    display: none;
+}
+
+.menu_btn_rotate {
+    > span {
+        transform: rotate(45deg);
+
+        &::before {
+            top: 0;
+            transform: rotate(0);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.menu__toggle {
+    visibility: visible;
+    left: 0;
+}
+
+.img__nav {
+    display: none;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .img__nav {
+        display: grid;
+        gap: 20px;
+    }
+}
+
+.img__nav--hr {
+    display: none;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .img__nav--hr {
+        display: block;
+        border: 1px solid $white;
+        margin: 35px 0 35px 0;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .img__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and(max-width:$breakpoint_sm) {
+    .img__nav--img {
+        width: 95px;
+        height: 95px;
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width:$breakpoint_m) {
+    .img__nav--column {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width:$breakpoint_sm) {
+    .img__nav--column {
+        display: contents;
+    }
+
+}
+
+.welcome__social {
+    display: none;
+}
+
+@media screen and(max-width:$breakpoint_m) {
+    .welcome__social {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+#buttonUp {
+    display: inline-block;
+    background-color: #817b7b;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#buttonUp::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#buttonUp:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#buttonUp:active {
+    background-color: #555;
+}
+
+#buttonUp.show {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="player">
+            <audio src="assets/sounds/Bring Me The Horizon — Sleepwalking.mp3"></audio>
+            <div class="player-controls">
+                <button class="play-prev player-icon"></button>
+                <button class="play player-icon"></button>
+                <button class="play-next player-icon"></button>
+            </div>
+            <div class="progress-inner">
+                <div class="volume-inner">
+                    <img class="volume-button" src="assets/svg/volume-on.svg" alt="">
+                    <input type="range" class="volume-bar" min="0" max="100" step="1" value="50">
+                </div>
+                <p class="song-name"></p>
+                <input type="range" class="progress-bar" min="0" max="100" step="1" value="0"
+                    onchange="changeProgressBar()">
+            </div>
+            <div class="time-inner">
+                <div class="current-time"></div>
+                <p>&ensp;/&ensp;</p>
+                <div class="duration-time"></div>
+            </div>
+            <ul class="play-list"></ul>
+        </div>
+
+        <div class="weather">
+            <div class="settings-inner">
+                <button id="modalButton">
+                    <img class="settings" src="assets/svg/settings.svg" alt=""></button>
+            </div>
+            <input type="text" class="city" />
+            <i class="weather-icon owf"></i>
+            <div class="weather-error"></div>
+            <div class="description-container">
+                <span class="temperature"></span>
+                <span class="weather-description"></span>
+            </div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="slider-icons">
+            <button class="slide-prev slider-icon"></button>
+            <button class="slide-next slider-icon"></button>
+        </div>
+        <time class="time"></time>
+        <date class="date"></date>
+        <div class="greeting-container">
+            <span class="greeting"></span>
+            <input type="text" class="name">
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-info">
+            <p>© 2021</p>
+            <a href="https://rs.school/">
+                <p> RSSchool</p>
+            </a>
+            <a href="https://github.com/yanastvl">
+                <p>Stoyanidu Yana</p>
+            </a>
+        </div>
+        <div>
+            <button class="change-quote"></button>
+            <div class="quote"></div>
+            <div class="author"></div>
+        </div>
+        <div class="toDo-list">
+            <img class="toDo-img" src="assets/svg/notebook.svg" alt="">
+            <form class="js-toDoForm" style="opacity: 0;" action="">
+                <input class="toDoInput" type="text" value="ToDo">
+            </form>
+            <ul class="js-toDoList"></ul>
+        </div>
+    </footer>
+    <div class="booking__wrapper" id="modalWindow">
+        <div class="booking">
+            <button class="booking-close" type="button" href="#">
+                <svg class="modal-close" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L26 26" stroke="#fff" />
+                    <path d="M26 1L1 26" stroke="#fff" />
+                </svg>
+            </button>
+            <h2 class="modal-title translate">Application setup</h2>
+            <div class="settings-block">
+                <p class="settings-text translate">Application language</p>
+                <div>
+                    <button class="settings-button locale" id="en">EN</button>
+                    <button class="settings-button locale" id="ru">RU</button>
+                </div>
+            </div>
+            <h3 class="modal-subtitle translate">Displaying items</h3>
+            <div class="displaying-block">
+                <div class="settings-block">
+                    <p class="settings-text translate">Time</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">Date</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">Greeting</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">Quotes</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">Weather</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">Audio player</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+                <div class="settings-block">
+                    <p class="settings-text translate">ToDo List</p>
+                    <div>
+                        <button class="settings-button on">ON</button>
+                        <button class="settings-button off">OFF</button>
+                    </div>
+                </div>
+            </div>
+            <h3 class="modal-subtitle translate">Background IMG</h3>
+            <div class="settings-button-block">
+                <button class="settings-button" id="github">GITHUB</button>
+                <button class="settings-button" id="unsplashApi">UNSPLASH API</button>
+                <button class="settings-button" id="flickrApi">FLICKR API</button>
+            </div>
+            <div class="settings-block">
+                <p class="translate">Photo tag</p>
+                <input type="text" id="photoTag">
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
