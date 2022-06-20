@@ -1,2 +1,2 @@
 # yanastvl-JSFE2021Q3
-Private repository for @yanastvl
+Музей (Лувр) и Momentum - проекты, созданные на стажировке в EPAM
